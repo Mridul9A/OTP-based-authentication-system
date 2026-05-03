@@ -1,9 +1,24 @@
-import React from 'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
+import Otp from "./pages/Otp";
+import Welcome from "./pages/Welcome";
+import PrivateRoute from "./components/PrivateRoute";
 
-const App = () => {
+export default function App() {
   return (
-    <div>App</div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/otp" element={<Otp />} />
+        <Route
+          path="/welcome"
+          element={
+            <PrivateRoute>
+              <Welcome />
+            </PrivateRoute>
+          }
+        />
+      </Routes>
+    </BrowserRouter>
+  );
 }
-
-export default App
