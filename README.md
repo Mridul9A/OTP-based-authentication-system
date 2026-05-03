@@ -107,7 +107,7 @@ VITE_API_URL=http://localhost:3000
 npm run dev
 ```
 
-👉 Frontend runs on:
+Frontend runs on:
 
 ```
 http://localhost:5173
@@ -181,7 +181,7 @@ Authorization: Bearer <token>
 
 ---
 
-# ⚠️ Limitations
+#  Limitations
 
 * No real SMS/email integration
 * No database (in-memory store)
@@ -189,7 +189,7 @@ Authorization: Bearer <token>
 
 ---
 
-# 🚀 Future Improvements
+# Future Improvements
 
 * Redis for OTP storage (TTL)
 * Rate limiting (IP-based)
