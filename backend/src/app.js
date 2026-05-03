@@ -12,7 +12,7 @@ app.use(cors({
 }));
 app.use(express.json());
 
-// Routes
+// Auth Routes
 app.use("/auth", authRoutes);
 
 module.exports = app;

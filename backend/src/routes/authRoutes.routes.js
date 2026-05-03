@@ -10,8 +10,10 @@ const {
 const authMiddleware = require("../middleware/authMiddleware");
 
 // Routes
-router.post("/request-otp", requestOtp);
-router.post("/verify-otp", verifyOtp);
-router.get("/me", authMiddleware, getMe);
+router.post("/request-otp", requestOtp); // generate OTP
+router.post("/verify-otp", verifyOtp);   // verify OTP and login
+
+// Protected route
+router.get("/me", authMiddleware, getMe);  // get user info
 
 module.exports = router;
